@@ -12,8 +12,6 @@ public class AstroInfo {
     private String status;     // A person's status of whether they are on Earth or in space
 
 
-    //previous code that ive got open rn   personalinformation, personBuilder
-
     /**
      The setName method sets the person's name
      @param name2 The person's name
@@ -28,7 +26,6 @@ public class AstroInfo {
      */
     public void setSerialNum(String serialNum2){
         serialNum = serialNum2;
-        //make this so it randomly generates a serial number (5 numbers long and it has to be numbers)
     }
 
     /**
@@ -176,9 +173,6 @@ public class AstroInfo {
     public String getStatus(){            
         return status;
     }
-
-
-
 
 
 }
