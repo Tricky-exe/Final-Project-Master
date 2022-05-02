@@ -4,10 +4,9 @@ public class AstroMain{
     public static void main(String[] args){
         String name, serialNum, dob, address, phone, email, nextKin, status;
         double weight, payRate;
-        boolean y = true;
-        boolean n = false;
-        
-
+        String input;
+        boolean statusF = false;
+        serialNum = "";
         Scanner keyboard = new Scanner(System.in);
 
         //Prompts for the astronauts name
@@ -15,9 +14,19 @@ public class AstroMain{
         name = keyboard.nextLine();
 
         //Prompts for the astronauts serial number
-        System.out.println("What is the astronauts Serial Number? (Must be a 6 diget number)");
+        
+        
+        //Checks to make sure that the user is puttin in a 6 digit number
+        while(statusF == false){      
+        System.out.println("What is the astronauts Serial Number? (Must be a 6 digit number)");
         serialNum = keyboard.nextLine();
-
+        
+        if (!Verifier.serialValid(serialNum))
+            System.out.println("Please input a 6 digit number");
+            
+        else
+            System.out.println("Accepted!");
+        }
         //Prompts for the astronauts date of birth
         System.out.println("What is the astronauts date of birth? (MM-DD-YYYY)");
         dob = keyboard.nextLine();
@@ -59,14 +68,20 @@ public class AstroMain{
         System.out.println("Name of the astronaut: " + name + "\nSerial Number: " + serialNum + "\nDate of birth: " + dob + "\nWeight: " + weight + "\nAddress: " + address + "\nPhone Number: " + phone + "\nEmail Address: " + email + "\nPay Rate: " + payRate + "\nNext of Kin: " + nextKin + "\nStatus: " + status);
         
         
-        //Asks if everything is right
+        //Asks if the user wants to edit any info
         System.out.println("Is there anything you would like to edit? \n(Y/N)");
-        y = keyboard.nextBoolean();
-        n = keyboard.nextBoolean();
+        input = keyboard.nextLine();
+        input = keyboard.nextLine();
+
+    
+
+        System.out.println("You selected yes. What would you like to change? \n1.Name \n2.Serial Number \n3.Date of Birth \n4.Weight \n5.Address \n6.Phone Number \n7.Email Address \n8.Pay Rate \n9.Next of Kin \n10.Status");
+
+        
 
 
 
-
+        //refrencing password verifier (and its main), and conversion program
 
 
 
